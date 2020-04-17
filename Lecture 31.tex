@@ -1,0 +1,118 @@
+\documentclass[10pt]{article}
+\usepackage{NotesTeX} %/Path/to/package should be replaced with package location
+\usepackage{lipsum}
+\usepackage{tensor}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+
+\newcommand{\bs}{\textbackslash}
+
+
+\title{{\Huge General Relativity}\\{\Large{Class 31}}} %replace with class number
+\author{Josephina Wrightl}
+
+\emailAdd{jrwright@utexas.edu} %replace with your email
+\begin{document}
+    \maketitle
+    \flushbottom
+    \newpage
+    \pagestyle{fancynotes}
+    \part{Black Holes: Conformal Diagrams and Causality}
+WORK IN PROGRESS!!!
+\newline A black hole is set of events (an event defined as a point in the spacetime manifold) that can never communicate with asymptotic infinity. This means that regions in the manifold cannot communicate with regions that are arbitrarily far away. Communication is done by sending a causal cure, timelike or null, out to infinity. 
+	The event horizon is the boundary of the black hole
+              	\section{Conformal Transformations }\label{sec:class_style}
+              		 A metric is conformally related to another metric if
+              		 \begin{equation}
+              		 \widetilde{g_{uv}}=\omega(x^u)^2g_(uv)
+              		 \end{equation}
+              		 Where \(\omega\) is a function of spacectime.  \(\omega\) is essentially re-scaling the proper times and proper distances in the spacetime in a position dependent manner. The resulting 	\(\widetilde{g_{uv}}\) is a conformal transform of guv.
+              	\(\widetilde{g_{uv}}\) is oft4en viewed as unphysical, since guv solves Einstein's field equations for some sources, but 	\(\widetilde{g_{uv}}\) will not solves Einstein's field equations with those sources. 	\(\widetilde{g_{uv}}\) is not a physical metric, simply a tool that can be used to understand spacetime.
+              		 For example, the Weyl tensor can be calculated with guv or 	\(\widetilde{g_{uv}}\), while both options are equal, they are noted by 
+              		  \begin{equation}
+              		\widetilde{C^u_{v\rho\sigma}}=C^u_{v\rho\sigma}
+              		 \end{equation}
+              		 Where the following is not equal to each other
+              		   \begin{equation}
+              		\widetilde{C_{uv\rho\sigma}}\neq{C_{uv\rho\sigma}}
+              		 \end{equation}
+              		 This is because the index is lowered using the 	\(\widetilde{g_{uv}}\) and guv respectively. In other words, 
+              		  \begin{equation}
+              	 \widetilde{g_{u\alpha}}\widetilde{C^\alpha_{v\rho\sigma}}\neq{g_{u\alpha}C^\alpha_{v\rho\sigma}}
+              		 \end{equation}
+              		  	Another fact that makes conformal transformations useful in understanding a metric that is physical is, given a null vector \(k^u\) (where \(k^uk^v\widetilde{g_{uv}}=0\)) Then \(k^u\) is null with respect to \(\widetilde{g_{uv}}\):
+              		  		 \begin{equation}
+              		 k^uk^v\widetilde{g_{uv}}=\omega(k^uk^vg_{ev})^2=0
+              		 \end{equation}
+              		 Conformal transformations preserve the light cone structure. If two events are related by a null trajectory in \({g_{uv}}\), then they are also connected by a null trajectory in 	\(\widetilde{g_{uv}}\). 
+               	\section{Conformal Diagrams}\label{sec:class_style}
+               	The goal is to draw a spacetime diagram of all the spacetime, plus infinity. This is done by making a spacetime diagram of Equation 1.1
+              Example: Minkowski Spacetime
+              \begin{equation}
+                  ds^2=-dt^2+dr^2+r^2d\Omega^2
+              \end{equation}
+              \begin{equation}
+                  ds^2=\frac{1}{(cos{\tilde{T}}+cos{\tilde{R})}^2}(d\tilde{T}+d\tilde{R}+sin(\tilde{R})^2d\omega^2)
+              \end{equation}
+               	Insert diagram here
+               	Steps to derive conformal diagram for Minkowski
+               	(Can be found in Appedix H of Carroll)
+               	\begin{enumerate}
+                    \item use null coordinates 
+                    \begin{equation}
+                   \begin{align}
+                        u=t-r && v=t+r\\
+                        t=\frac{v+u}{2} &&r=\frac{v-u}{2} \\
+                        -\infty>u>\infty && -\infty>v>\infty\\
+                        && v\geq{u}
+                        \end{align}
+                    \end{equation}
+                    Where the \(v\geq{u}\) condition comes from the fact that r must be positive. 
+                    In these coordinates, the metric can be written as 
+                    \begin{equation}
+                        ds^2=\frac{-1}{2}(dudv+dvdu)^2+r^2\Omega^2
+                    \end{equation}
+                    Remembering that \(dudv+dvdu=2dudv\)
+                    \item Compactify coordinates
+                    \begin{equation}
+                   \begin{align}
+                        u=tan(\widetilde{U}) && v=tan(\widetilde{V})\\
+                        -\frac{\pi}{2}<tan(\widetilde{U})<\frac{\pi}{2} && -\frac{\pi}{2}<tan(\widetilde{V})<\frac{\pi}{2}
+                        \end{align}
+                    \end{equation}
+            Now the coordinate system is such that whole metric can be written in a finite range of coordinates.
+                                \begin{equation}
+                   \begin{align}
+                        du=sec^2(\widetilde{U}d\widetilde{U})&&dv=sec^2(\widetilde{V}d\widetilde{V})\\
+                        \end{align}
+                    \end{equation}
+                    \begin{equation}
+                        r^2=(\frac{sin(\widetilde{V}-\widetilde{U}}{2cos(\widetilde{V}cos(\widetilde{U}))})^2
+                    \end{equation}
+            
+               	Now
+               	\begin{equation}
+               	    ds^2=\frac{1}{4cos^2\widetilde{U}cos^2\widetilde{V}}(-4d\widetilde{U}d\widetilde{V}+sin^2(\widetilde{V}-\widetilde{U})d\Omega^2)
+               	\end{equation}
+               	
+               	\item define \((\widetilde{T},\widetilde{R})\), \(\widetilde{R}=\widetilde{v}-\widetilde{R}\), and \(\widetilde{R}=\widetilde{V}+\widetilde{U}\)
+               	Resulting in 
+               	\begin{equation}
+               	 \begin{align} ds^2=\frac{1}{(4cos\widetilde{U}cos\widetilde{V})^2}(-d\widetilde{T}^2+d\widetilde{R}^2+sin^2\widetilde{R}d\Omega^2)\\
+               	  0\leq{\widetilde{R}}<\pi && |\widetilde{T}|+\widetilde{R}<\pi
+               	  \end{align}
+               	\end{equation}
+               	\item Consider the conformally rescaled metric, then draw the spacetime diagrams
+               	\begin{equation}
+               	   \begin{align} d\widetilde{S}^2=\omega^2ds^2 &&  \omega=cos\widetilde{T}+cos\widetilde{R}
+               	   \end{align}
+               	\end{equation}
+               	\begin{equation}
+               	    d\widetilde{S}=-d\widetilde{T}^2+d\widetilde{R}^2+sin^2(\widetilde{R})d\Omega^2
+               	\end{equation}
+               	Draw diagrams here...
+             \end{enumerate}
+             
+    \newpage
+    
+\end{document}
